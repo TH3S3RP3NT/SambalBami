@@ -1,0 +1,372 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  letter-spacing: -0.25px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src: url('../fonts/Marianne-Bold.woff2') format('woff2'),
+    url('../fonts/Marianne-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src: url('../fonts/Marianne-Light.woff2') format('woff2'),
+    url('../fonts/Marianne-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src: url('../fonts/Marianne-Regular.woff2') format('woff2'),
+    url('../fonts/Marianne-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src: url('../fonts/Marianne-Thin.woff2') format('woff2'),
+    url('../fonts/Marianne-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@media (max-width: 750px) {
+  #background-video {
+    display: none;
+  }
+
+  body {
+    background: url("../img/background.mp4") no-repeat;
+    background-size: cover;
+  }
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+body {
+  font-family: 'Marianne';
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: url("../img/background.mp4") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+h1 {
+  font-size: 24px;
+  color: #23242a;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.contact {
+  font-size: 24px;
+  color: #e3e3e3;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-size: 16px;
+  color: #23242a;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #23242a;
+}
+
+input[type="submit"],
+button {
+  background-color: #1a73e8;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #0056b3;
+}
+
+#tonen {
+  width: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #23242a;
+}
+
+#wrapper {
+  width: 900px;
+  margin: auto;
+}
+
+header {
+  background-color: #23242a;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #23242a;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.dropdown {
+  min-width: 15em;
+  position: relative;
+  margin: 2em;
+}
+
+.dropdown * {
+  box-sizing: border-box;
+}
+
+.select {
+  background: #2a2f3b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px #2a2f3b solid;
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.select-clicked {
+  border: 2px #26489a solid;
+  box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover {
+  background: #323741;
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px #fff solid;
+  transition: 0.3s;
+}
+
+.caret-rotate {
+  transform: rotate(180deg);
+}
+
+.menu {
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: #323741;
+  border: 1px #363a43 solid;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: #9fa5b5;
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.menu li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background: #2a2d35;
+}
+
+.active {
+  background: #23242a;
+  color: #fff;
+}
+
+.menu-open {
+  display: block;
+  opacity: 1;
+}
+
+.ldropdown {
+  text-decoration: none;
+  color: #fff
+}
+
+.custom-table {
+  max-width: 950px;
+  margin: 4em auto 2em auto;
+  padding-top: 5em;
+  background: rgba(69,78,105, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(69,78,105, 0.3);
+  border-radius: 0.5em;
+  position: relative;
+  color: #fff;
+}
+
+.table-title {
+  position: absolute;
+  top: -2em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 4em);
+  border-radius: 0.5em;
+  padding: 2em;
+  background-color: #5661ff;
+  box-shadow: 0px 0px 1em #324bff:
+  color: #fff;
+}
+
+.custom-table table {
+  width: 100%;
+}
+
+.custom-table tr {
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: 100px 150px 150px 200px 100px 100px;
+  justify-items: start;
+  grid-gap: 1em;
+}
+
+.custom-table th {
+  color: #d3d3d3;
+  font-weight: 400;
+}
+
+.custom-table th, .custom-table td {
+  padding: 1em;
+}
+
+.custom-table tbody tr {
+  border-top: 1px #495066 solid;
+}
+
+.custom-table tbody td {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.id {
+  gap: 1em;
+}
+
+.custom-table small {
+  color: #d6d6d6;
+}
+
+.paystat span, .shipstat span {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0.5em 0.8em;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.accepted {
+  background-color: #3fd131;
+}
+
+.shipped {
+  background-color: #ff8a00;
+}
+
+.delivered {
+  background-color: #3fd131;
+}
+
+.more a {
+  color: #91d9ff;
+}
+
+.product {
+  display: inline-block;
+  margin: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.product img {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
